@@ -1,0 +1,8 @@
+.count {
+  margin:0 auto;
+  display: table;
+}
+.count div {
+  display:inline-block;
+  margin: 10px;
+}

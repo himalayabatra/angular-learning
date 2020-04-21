@@ -1,0 +1,8 @@
+<div class="timer-value-component">
+  <label for="timer">Enter Timer Limit: </label>
+  <Input type="number" [value]="timerValue" #timerInput />
+  <div class="button-containers">
+    <button (click)="startTimer(timerInput.value)">Start/Pause</button>
+    <button (click)="resetTimer()">Reset</button>
+  </div>
+</div>

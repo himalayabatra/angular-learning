@@ -1,0 +1,12 @@
+.timer-value-component {
+  margin: 0 auto;
+  display: table;
+  padding: 20px;
+}
+.button-containers {
+  padding:10px;
+}
+button {
+  height:30px;
+  margin:5px;
+}

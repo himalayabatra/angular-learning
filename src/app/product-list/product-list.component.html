@@ -1,0 +1,19 @@
+<div class="plp-container">
+  <button (click)="toggleGrid(true)">Grid</button>
+  <button (click)="toggleGrid(false)">List</button>
+
+  <select (change)="sort($event.target.value)">
+    <option value="0"> Select</option>
+    <option value="lth">LOW to HIGH</option>
+    <option value="htl">HIGH to LOW</option>
+  </select>
+
+  <div class="row">
+    <div
+      *ngFor="let product of allProducts"
+      [ngClass]="isGridView ? 'col-lg-12' : 'col-lg-3'"
+    >
+      <app-product-view [product]="product"></app-product-view>
+    </div>
+  </div>
+</div>

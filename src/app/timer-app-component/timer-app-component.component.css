@@ -1,0 +1,16 @@
+.main-container {
+  border: 2px solid black;
+  padding:5px 10px;
+}
+.upper-row, .lower-row {
+  display: flex;
+}
+.child-comp {
+  flex:1;
+  align-items:center;
+  margin:5px;
+  height:200px;
+}
+.border {
+  border:2px solid black;
+}
