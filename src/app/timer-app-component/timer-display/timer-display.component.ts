@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {TimerActionsService} from '../timer-actions.service';
+import {TimerActionsService} from '../services/timer-actions.service';
 import { Subscription } from 'rxjs';
 
 @Component({

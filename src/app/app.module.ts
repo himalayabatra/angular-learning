@@ -3,29 +3,25 @@ import { NgModule } from '@angular/core';
 import {RouterModule} from '@angular/router'
 
 import { AppComponent } from './app.component';
-import { TimerValueComponent } from './timer-value/timer-value.component';
-import { TimerDisplayComponent } from './timer-display/timer-display.component';
-import { TimerEventsComponent } from './timer-events/timer-events.component';
-import { TimerEventsCountsComponent } from './timer-events-counts/timer-events-counts.component';
-import { TimerAppComponentComponent } from './timer-app-component/timer-app-component.component';
+import { TimerModule } from './timer-app-component/timer-app-component.module';
 import { ProductListComponent } from './product-list/product-list.component';
-import { ProductViewComponent } from './product-view/product-view.component';
+import { ProductViewComponent } from './product-list/product-view/product-view.component';
+import { StartComponentComponent } from './start-component/start-component.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    TimerValueComponent,
-    TimerDisplayComponent,
-    TimerEventsComponent,
-    TimerEventsCountsComponent,
-    TimerAppComponentComponent,
     ProductListComponent,
-    ProductViewComponent
+    ProductViewComponent,
+    StartComponentComponent
   ],
   imports: [
     BrowserModule,
+    TimerModule,
     RouterModule.forRoot([
-      { path: '', component: TimerAppComponentComponent },
+      { path: '', component: StartComponentComponent },
+      { path: 'timer', loadChildren: ()=> import('./timer-app-component/timer-app-component.module').then(m => m.TimerModule)},
       { path: 'plp', component: ProductListComponent },
     ])
   ],

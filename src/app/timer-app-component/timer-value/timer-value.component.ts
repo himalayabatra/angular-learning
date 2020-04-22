@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import {TimerActionsService} from '../timer-actions.service';
+import {TimerActionsService} from '../services/timer-actions.service';
 
 @Component({
   selector: 'app-timer-value',

@@ -1,12 +1,16 @@
 <div class="plp-container">
+  <div class="row plp-header">
+    <div class="button-container">
   <button (click)="toggleGrid(true)">Grid</button>
   <button (click)="toggleGrid(false)">List</button>
+    </div>
 
-  <select (change)="sort($event.target.value)">
+  <select class="dropown-container" (change)="sort($event.target.value)">
     <option value="0"> Select</option>
     <option value="lth">LOW to HIGH</option>
     <option value="htl">HIGH to LOW</option>
   </select>
+  </div>
 
   <div class="row">
     <div
